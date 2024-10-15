@@ -21,14 +21,12 @@ public class UserController {
     public String displayIndex() {
         return "user/index";
     }
+
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
-//        model.addAttribute("username", user.getUsername());
-//        model.addAttribute("email", user.getEmail());
-//        model.addAttribute("password", user.getPassword());
-        verify = "password";
+        verify = "pie";
 
-        if (2 == 2) {
+        if (verify.equals(user.getPassword())) {
             return "user/index";
         } else {
             return "user/add";
