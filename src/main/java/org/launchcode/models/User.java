@@ -3,7 +3,7 @@ package org.launchcode.models;
 public class User {
     private String username;
     private String email;
-    private String password;
+    private String password = "password";
 
     public User(String username, String email, String password) {
         this.username = username;

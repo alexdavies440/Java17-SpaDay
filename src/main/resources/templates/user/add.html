@@ -2,18 +2,22 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Add User</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <form action="post">
-    <div>
-        <label>Username: <input type="text"></label>
+    <div class="form-group">
+        <label>Username: <input type="text" name="username"></label>
     </div>
-    <div>
-        <label>Email: <input type="text"></label>
+    <div class="form-group">
+        <label>Email: <input type="email" name="email"></label>
     </div>
-    <div>
-        <label>Password: <input type="password"></label>
+    <div class="form-group">
+        <label>Password: <input type="password" name="password"></label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Login"/>
     </div>
 </form>
 </body>
