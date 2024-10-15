@@ -25,6 +25,10 @@ public class UserController {
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         verify = "pie";
+        String error = "Please try again";
+        model.addAttribute("error", error);
+        model.addAttribute("username", user.getUsername());
+        model.addAttribute("email", user.getEmail());
 
         if (verify.equals(user.getPassword())) {
             return "user/index";
