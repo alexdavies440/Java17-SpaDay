@@ -36,4 +36,18 @@ public class UserController {
             return "user/add";
         }
     }
+
+//    @PostMapping("add")
+//    public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
+//        verify = "pie";
+//
+//
+//        if (user.getPassword().equals(verify)) {
+//            String message = "Welcome " + user.getUsername();
+//            model.addAttribute("message", message);
+//            return "user/index";
+//        } else {
+//            return "user/add";
+//        }
+//    }
 }
