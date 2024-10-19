@@ -1,5 +1,6 @@
 package org.launchcode.controllers;
 
+import jakarta.validation.Valid;
 import org.launchcode.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @GetMapping("/add")
-    public String displayAddUserForm(Model model, User user) {
+    public String displayAddUserForm(Model model,@Valid User user) {
         model.addAttribute(new User());
         return "user/add";
     }
